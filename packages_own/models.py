@@ -145,7 +145,7 @@ def load_testdata():
     """
     Load test data and labels.
     """
-    te_data = np.load('./params/NN_params/features_testset.npy')
+    te_data = np.load('./params/NN_params/features_testset_norm.npy')
     te_label = np.load('./params/NN_params/labels_testset.npy')
     return torch.from_numpy(te_data).float(), torch.from_numpy(te_label).float()
 

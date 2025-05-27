@@ -15,7 +15,7 @@ if current_loop == 1:
     current_recom = navigator.initial_recommend(N=10)
 else:
     navigator.selected_params = list(np.load(f'./params/material_params/{current_loop - 1}_selected_params.npy'))
-    ensemble.load_model_weights(loop=current_loop - 1)
+    ensemble.load_model_weights(loop=current_loop - 1)#load model weights in the previous loop
     current_recom = navigator.incremental_recommend(ensemble, N=10)
 # Print the current recommendations
 print(current_recom)
